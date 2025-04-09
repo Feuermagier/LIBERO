@@ -93,10 +93,8 @@ class ControlEnv:
             try:
                 ret = self.env.reset()
                 success = True
-            except RandomizationError:
+            except RandomizationError as e:
                 pass
-            finally:
-                continue
 
         return ret
 
